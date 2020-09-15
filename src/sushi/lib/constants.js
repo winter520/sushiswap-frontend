@@ -41,15 +41,15 @@ export const INTEGERS = {
 export const contractAddresses = {
   sushi: {
     1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
-    97: '0xe21CB48b019FadCAC4B880BaB943E2d08D761A3A',
+    97: '0xa5a3c93776ba2e1a78c79e88a2cb5abab2a0097f',
   },
   masterChef: {
     1: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd',
-    97: '0x277c6472182D7Ad7faf7def27B27ec6c8F17288b',
+    97: '0x2987e112b86cce93357c10bd1be07fe64e6fc01f',
   },
   weth: {
     1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
-    97: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+    97: '0x29D827A5a08D50bD6f64bA135bCFE2C5d1108711',
   },
 }
 
@@ -72,23 +72,23 @@ UNI-V2 LP Address on mainnet for reference
 */
 
 export const supportedPools = [
-  // {
-  //   pid: 12,
-  //   lpAddresses: {
-  //     1: '0xce84867c3c02b05dc570d0135103d3fb9cc19433',
-  //     97: '0xce84867c3c02b05dc570d0135103d3fb9cc19433',
-  //   },
-  //   tokenAddresses: {
-  //     1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
-  //     97: '0xe21CB48b019FadCAC4B880BaB943E2d08D761A3A',
-  //   },
-  //   name: 'Sushi Party!',
-  //   symbol: 'SUSHI-ETH UNI-V2 LP',
-  //   tokenSymbol: 'SUSHI',
-  //   icon: '🍣',
-  // },
   {
     pid: 0,
+    lpAddresses: {
+      1: '0xce84867c3c02b05dc570d0135103d3fb9cc19433',
+      97: '0x11f836dcdc61bf92f38f98565dcb6573337d6a5f',
+    },
+    tokenAddresses: {
+      1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
+      97: '0xa5a3c93776ba2e1a78c79e88a2cb5abab2a0097f',
+    },
+    name: 'Sushi Party!',
+    symbol: 'SUSHI-ETH UNI-V2 LP',
+    tokenSymbol: 'SUSHI',
+    icon: '🍣',
+  },
+  {
+    pid: 1,
     lpAddresses: {
       1: '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852',
       97: '0x72b60cae10b8b921c648c04acd66104f25de7994',
@@ -97,9 +97,9 @@ export const supportedPools = [
       1: '0xdac17f958d2ee523a2206206994597c13d831ec7',
       97: '0x6fb8125c42a53dced3c4c05e1712e4c5ca1c6dc2',
     },
-    name: 'Tether Turtle',
-    symbol: 'USDT-ETH UNI-V2 LP',
-    tokenSymbol: 'USDT',
+    name: 'Anyswap Turtle',
+    symbol: 'ANY-ETH UNI-V2 LP',
+    tokenSymbol: 'ANY',
     icon: '🐢',
   },
   // {

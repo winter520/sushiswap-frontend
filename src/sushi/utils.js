@@ -70,7 +70,7 @@ export const getPoolWeight = async (masterChefContract, pid) => {
 }
 
 export const getEarned = async (masterChefContract, pid, account) => {
-  return masterChefContract.methods.pendingSushi(pid, account).call()
+  return masterChefContract.methods.pendingReward(pid, account).call()
 }
 
 export const getTotalLPWethValue = async (
@@ -85,10 +85,21 @@ export const getTotalLPWethValue = async (
     .balanceOf(lpContract.options.address)
     .call()
   const tokenDecimals = await tokenContract.methods.decimals().call()
+  if (masterChefContract && masterChefContract.methods) {
+    // console.log(masterChefContract.methods.poolId('0x72b60cae10b8b921c648c04acd66104f25de7994').call())
+    // console.log(masterChefContract.methods.poolLength().call())
+    // console.log(masterChefContract.methods.poolLength().call())
+    // console.log(masterChefContract.methods.userInfo('1', '0xE000E632124aa65B80f74E3e4cc06DC761610583').call())
+    // console.log(masterChefContract.methods)
+    // console.log(lpContract.methods.allowance('0xE000E632124aa65B80f74E3e4cc06DC761610583', '0x72b60cae10b8b921c648c04acd66104f25de7994').call())
+  }
   // Get the share of lpContract that masterChefContract owns
   const balance = await lpContract.methods
     .balanceOf(masterChefContract.options.address)
     .call()
+    console.log(lpContract.options.address)
+    console.log(masterChefContract.options.address)
+    console.log(balance.toString())
   // Convert that into the portion of total lpContract = p1
   const totalSupply = await lpContract.methods.totalSupply().call()
   // Get total weth value for the lpContract = w1
